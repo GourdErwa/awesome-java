@@ -7,7 +7,7 @@ Contributing
 
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
 
-This project adheres to the **[MIT license][MIT license].**. By participating, you are expected to uphold this code.
+This project adheres to the **[MIT license][MIT license].** By participating, you are expected to uphold this code.
 
 Submitting a pull request
 -------------------------
@@ -27,7 +27,7 @@ Here are a few things you can do that will increase the likelihood of your pull 
 ## Environment
 
  * Intellij IDEA
- 	* Intellij IDEA plugs
+ 	* use Intellij IDEA plugs（Preferences>Plugins>Browse repositories>${Plugin name}）
     	* [CheckStyle-IDEA](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea)
     	Setting>Other Settings>Checkstyle>Configuration File>active [alibaba_checks.xml](./checkstyle/alibaba_checks.xml)
     	* [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)
