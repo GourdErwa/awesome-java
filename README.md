@@ -12,7 +12,12 @@ Java 相关设计，设计模式
 # 快速开始
 
 * [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/tree/master/design-patterns)
-  * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
+    * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
+
+
+* [模拟项目需求](https://github.com/GourdErwa/java-design/tree/master/analog-demand)
+    * [应用别名替换](https://github.com/GourdErwa/java-design/tree/master/analog-demand/alias-replacement)
+
 
 # 参考链接
 
