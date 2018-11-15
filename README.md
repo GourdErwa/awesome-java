@@ -11,8 +11,8 @@ Java 相关设计，设计模式
 
 # 快速开始
 
-* [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/design-patterns)
-  * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/design-patterns/mediator)
+* [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/tree/master/design-patterns)
+  * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
 
 # 贡献
 
