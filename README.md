@@ -14,13 +14,23 @@ Java 相关设计，设计模式
 * [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/tree/master/design-patterns)
   * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
 
+# 参考链接
+
+* [wiki](https://en.wikipedia.org/wiki/Design_pattern)
+* [iluwatar](https://github.com/iluwatar/java-design-patterns)
+
 # 贡献
 
 如果您愿意为该项目做出贡献，您可以阅读贡献指导文件信息 [CONTRIBUTING.md](CONTRIBUTING.md).
 
 # 帮助
 
-[markdown语法](https://guides.github.com/features/mastering-markdown/)
+* [markdown语法](https://guides.github.com/features/mastering-markdown/)
+
+# 联系
+
+* QQ 群：348527861
+* email：gourderwa@163.com
 
 # License
 
