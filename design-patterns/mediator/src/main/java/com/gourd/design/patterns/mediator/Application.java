@@ -34,9 +34,9 @@ import com.gourd.design.patterns.mediator.colleague.Capitalist;
  *
  * @author wei.Li
  */
-public final class App {
+public final class Application {
 
-    private App() {
+    private Application() {
         //not called
     }
 

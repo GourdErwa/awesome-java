@@ -37,7 +37,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <compiler.version>3.0</compiler.version>
-
+        <lombok.version>1.18.4</lombok.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
 
@@ -53,6 +53,8 @@
 
     <modules>
         <module>design-patterns/mediator</module>
+
+        <module>analog-demand/alias-replacement</module>
     </modules>
 
 
@@ -62,6 +64,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
