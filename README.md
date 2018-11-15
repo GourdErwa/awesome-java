@@ -10,6 +10,7 @@
 Java 相关设计，设计模式
 
 # 快速开始
+>无特殊说明，所有模块 *Application 类为入口函数
 
 * [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/tree/master/design-patterns)
     * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
