@@ -21,9 +21,12 @@ Mediator Pattern的本质是“定义一个封装一组对象如何交互的对�
 
 # 类图
 ## UML class and sequence diagram
->![UML diagram](./doc/wiki.Mediator_UML.jpg)
+>![UML diagram](./etc/wiki.Mediator_UML.jpg)
 ## Class diagram
->![Class diagram](./doc/wiki.Mediator_Class_diagram.png)
+>![Class diagram](./etc/wiki.Mediator_Class_diagram.png)
+## 模拟示例Class diagram
+>![Class diagram](./doc/Mediator_Class_diagram.png)
+
 # 适用场景
 * 优点
     1. 简化对象之间的关系，将系统的各个对象之间的相互关系进行封装，将各个对象类解耦，使得系统变为松耦合。
