@@ -32,45 +32,42 @@ package com.gourd.design.patterns.mediator;
 public enum Action {
 
     /**
-     * The Hunt.
+     * Buy action.
      */
-    HUNT("hunted a rabbit", "arrives for dinner"),
+    BUY("购买"),
     /**
-     * The Tale.
+     * The Selling.
      */
-    TALE("tells a tale", "comes to listen"),
+    SELLING("出售"),
     /**
-     * The Gold.
+     * The Let.
      */
-    GOLD("found gold", "takes his share of the gold"),
+    LET("出租"),
     /**
-     * The Enemy.
+     * The Let.
      */
-    ENEMY("spotted enemies", "runs for cover"),
+    RENT("租用"),
+    /**
+     * The Look.
+     */
+    LOOK("观望"),
     /**
      * None action.
      */
-    NONE("", "");
+    NONE("");
 
     private String title;
-    private String description;
 
-    Action(String title, String description) {
+    Action(String title) {
         this.title = title;
-        this.description = description;
     }
 
     /**
-     * Gets description.
+     * Gets title.
      *
-     * @return the description
+     * @return the title
      */
-    public String getDescription() {
-        return description;
-    }
-
-    @Override
-    public String toString() {
+    public String getTitle() {
         return title;
     }
 }

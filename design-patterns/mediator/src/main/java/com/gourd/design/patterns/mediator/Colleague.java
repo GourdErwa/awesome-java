@@ -22,50 +22,35 @@
  * THE SOFTWARE.
  *
  */
+
 package com.gourd.design.patterns.mediator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
- * Abstract base class for party members.
+ * 同事，理解为所有实体对象，需求用户
  *
- * @author wei.Li
+ * @author wei.Li by 2018/11/15
  */
-public abstract class BasePartyMember implements PartyMember {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(BasePartyMember.class);
+public interface Colleague {
 
     /**
-     * The Party.
-     */
-    private Party party;
-
-    @Override
-    public void joinedParty(Party party) {
-        LOGGER.info("{} 参加晚会", this);
-        this.party = party;
-    }
-
-    @Override
-    public void partyAction(Action action) {
-        LOGGER.info("{} {}", this, action.getDescription());
-    }
-
-    @Override
-    public void act(Action action) {
-        if (party != null) {
-            LOGGER.info("{} {}", this, action);
-            party.act(this, action);
-        }
-    }
-
-    /**
-     * toString
+     * 参与中介方.
      *
-     * @return toString
+     * @param mediator the mediator
      */
-    @Override
-    public abstract String toString();
+    void joinedMediator(Mediator mediator);
+
+    /**
+     * 中介方发出动作.
+     *
+     * @param action the action
+     */
+    void mediatorAction(Action action);
+
+    /**
+     * 参与者自身发生动作.
+     *
+     * @param action the action
+     */
+    void act(Action action);
 
 }

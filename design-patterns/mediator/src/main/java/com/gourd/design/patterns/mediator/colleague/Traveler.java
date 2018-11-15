@@ -22,20 +22,18 @@
  * THE SOFTWARE.
  *
  */
-package com.gourd.design.patterns.mediator.member;
-
-import com.gourd.design.patterns.mediator.BasePartyMember;
+package com.gourd.design.patterns.mediator.colleague;
 
 /**
- * 晚会成员.
- * 猎人
+ * 旅行者
  *
  * @author wei.Li
  */
-public class Hunter extends BasePartyMember {
+public class Traveler extends BaseEstateAgentsColleague {
 
     @Override
     public String toString() {
-        return "猎人";
+        return "旅行者";
     }
+
 }

@@ -24,26 +24,43 @@
  */
 package com.gourd.design.patterns.mediator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * 晚会.
+ * 房产中介.
  *
  * @author wei.Li
  */
-public interface Party {
+public class EstateAgentsMediator implements Mediator {
 
     /**
-     * 添加成员.
-     *
-     * @param member the member
+     * 成员
      */
-    void addMember(PartyMember member);
+    private final List<Colleague> colleagues;
 
     /**
-     * 动作.
-     *
-     * @param actor  the actor
-     * @param action the action
+     * Instantiates a new Estate agents mediator.
      */
-    void act(PartyMember actor, Action action);
+    EstateAgentsMediator() {
+        colleagues = new ArrayList<>();
+    }
+
+    @Override
+    public final Mediator addColleague(final Colleague colleague) {
+        colleagues.add(colleague);
+        colleague.joinedMediator(this);
+        return this;
+    }
+
+    @Override
+    public final void act(final Colleague colleague, final Action action) {
+        for (Colleague member : colleagues) {
+            if (!member.equals(colleague)) {
+                member.mediatorAction(action);
+            }
+        }
+    }
+
 
 }

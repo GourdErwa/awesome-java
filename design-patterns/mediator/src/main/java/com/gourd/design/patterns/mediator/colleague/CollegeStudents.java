@@ -22,33 +22,18 @@
  * THE SOFTWARE.
  *
  */
-package com.gourd.design.patterns.mediator;
+package com.gourd.design.patterns.mediator.colleague;
 
 /**
- * 晚会参与成员与晚会关系定义 {@link Party}.
+ * 大学生
  *
  * @author wei.Li
  */
-public interface PartyMember {
+public class CollegeStudents extends BaseEstateAgentsColleague {
 
-    /**
-     * 参与晚会.
-     *
-     * @param party the party
-     */
-    void joinedParty(Party party);
+    @Override
+    public String toString() {
+        return "大学生";
+    }
 
-    /**
-     * 晚会其他参与发生动作.
-     *
-     * @param action the action
-     */
-    void partyAction(Action action);
-
-    /**
-     * 参与者自身发生动作.
-     *
-     * @param action the action
-     */
-    void act(Action action);
 }

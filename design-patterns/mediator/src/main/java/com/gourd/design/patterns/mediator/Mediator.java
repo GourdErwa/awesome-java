@@ -22,21 +22,29 @@
  * THE SOFTWARE.
  *
  */
-package com.gourd.design.patterns.mediator.member;
 
-import com.gourd.design.patterns.mediator.BasePartyMember;
+package com.gourd.design.patterns.mediator;
 
 /**
- * 晚会成员.
- * 男巫
+ * 中介者
  *
- * @author wei.Li
+ * @author wei.Li by 2018/11/15
  */
-public class Wizard extends BasePartyMember {
+public interface Mediator {
 
-    @Override
-    public final String toString() {
-        return "男巫";
-    }
+    /**
+     * 添加成员.
+     *
+     * @param colleague the colleague
+     * @return the mediator
+     */
+    Mediator addColleague(Colleague colleague);
 
+    /**
+     * 成员在中介中心发出动作.
+     *
+     * @param colleague the colleague
+     * @param action    the action
+     */
+    void act(Colleague colleague, Action action);
 }

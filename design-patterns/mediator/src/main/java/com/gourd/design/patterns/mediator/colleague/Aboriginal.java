@@ -22,21 +22,17 @@
  * THE SOFTWARE.
  *
  */
-package com.gourd.design.patterns.mediator.member;
-
-import com.gourd.design.patterns.mediator.BasePartyMember;
+package com.gourd.design.patterns.mediator.colleague;
 
 /**
- * 晚会成员.
- * 霍毕特人
+ * 土著
  *
  * @author wei.Li
  */
-public class Hobbit extends BasePartyMember {
+public class Aboriginal extends BaseEstateAgentsColleague {
 
     @Override
     public String toString() {
-        return "霍毕特人";
+        return "土著";
     }
-
 }

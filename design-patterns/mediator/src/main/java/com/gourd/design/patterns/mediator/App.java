@@ -24,14 +24,13 @@
  */
 package com.gourd.design.patterns.mediator;
 
-import com.gourd.design.patterns.mediator.member.Hobbit;
-import com.gourd.design.patterns.mediator.member.Hunter;
-import com.gourd.design.patterns.mediator.member.Rogue;
-import com.gourd.design.patterns.mediator.member.Wizard;
+import com.gourd.design.patterns.mediator.colleague.Traveler;
+import com.gourd.design.patterns.mediator.colleague.Aboriginal;
+import com.gourd.design.patterns.mediator.colleague.CollegeStudents;
+import com.gourd.design.patterns.mediator.colleague.Capitalist;
 
 /**
- * 中介者模式，定义了一个中介对象来封装一系列对象之间的交互关系。
- * 中介者使各个对象之间不需要显式地相互引用，从而使耦合性降低，而且可以独立地改变它们之间的交互行为。
+ * The type App.
  *
  * @author wei.Li
  */
@@ -48,25 +47,29 @@ public final class App {
      */
     public static void main(String[] args) {
 
-        // create party and members
-        Party party = new PartyImpl();
+        // 房产中间创建
+        final Mediator estateAgentsMediator = new EstateAgentsMediator();
 
-        Hobbit hobbit = new Hobbit();
-        Wizard wizard = new Wizard();
-        Rogue rogue = new Rogue();
-        Hunter hunter = new Hunter();
+        //旅行者
+        final Traveler traveler = new Traveler();
+        //资本家
+        final Capitalist capitalist = new Capitalist();
+        //大学生
+        final CollegeStudents collegeStudents = new CollegeStudents();
+        //土著
+        final Aboriginal aboriginal = new Aboriginal();
 
-        // add party members
-        party.addMember(hobbit);
-        party.addMember(wizard);
-        party.addMember(rogue);
-        party.addMember(hunter);
+        //需求用户连接 中介者
+        estateAgentsMediator
+                .addColleague(traveler)
+                .addColleague(capitalist)
+                .addColleague(collegeStudents)
+                .addColleague(aboriginal);
 
-        // perform actions -> the other party members
-        // are notified by the party
-        hobbit.act(Action.ENEMY);
-        wizard.act(Action.TALE);
-        rogue.act(Action.GOLD);
-        hunter.act(Action.HUNT);
+        //需求用户发出动作信息
+        traveler.act(Action.RENT);
+        capitalist.act(Action.BUY);
+        collegeStudents.act(Action.LOOK);
+        aboriginal.act(Action.SELLING);
     }
 }
