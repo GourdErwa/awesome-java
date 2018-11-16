@@ -63,6 +63,31 @@ public final class Application {
             .register(new AliasProducerGameServer())
             .start();
 
+
+        aliasGame1(aliasCenter);
+        aliasCenter.reLoadAliasProducer();
+
+        aliasGame2(aliasCenter);
+        aliasCenter.reLoadAliasProducer();
+
+        /*
+         * 重载所有别名生产方别名数据
+         * 应用于缓存更新等操作
+         */
+        aliasCenter.reLoadAliasProducer();
+        /*
+         * 系统停止时
+         * 关闭资源
+         */
+        aliasCenter.close();
+    }
+
+    /**
+     * aliasGame1
+     *
+     * @param aliasCenter aliasCenter
+     */
+    private static void aliasGame1(AliasCenter aliasCenter) {
         /*
          * 示例
          * 替换 game01 应用下道具别名, 道具ID分别为 101,102
@@ -76,12 +101,19 @@ public final class Application {
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("原始数据: {} , 替换别名后 {}", Arrays.toString(game01Originals), Arrays.toString(game01s));
         }
+    }
 
+    /**
+     * aliasGame2
+     *
+     * @param aliasCenter aliasCenter
+     */
+    private static void aliasGame2(AliasCenter aliasCenter) {
         /*
          * 示例
-         * 替换 game02 应用下道具别名, 道具ID分别为 201,202
+         * 替换 game02 应用下道具别名, 道具ID分别为 101,102
          */
-        final String[] game02Originals = {"201", "202"};
+        final String[] game02Originals = {"101", "102"};
         final String[] game02s = aliasCenter.aliasReplace(
             AliasCenterKey.create("game02", AliasProducerKeyEnum.GAME_ITEM),
             game02Originals,
@@ -90,16 +122,5 @@ public final class Application {
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("原始数据: {} , 替换别名后 {}", Arrays.toString(game02Originals), Arrays.toString(game02s));
         }
-
-        /*
-         * 重载所有别名生产方别名数据
-         * 应用于缓存更新等操作
-         */
-        aliasCenter.reLoadAliasProducer();
-        /*
-         * 系统停止时
-         * 关闭资源
-         */
-        aliasCenter.close();
     }
 }

@@ -32,6 +32,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * 别名生产者抽象父类.
@@ -43,17 +46,33 @@ public abstract class AbstractAliasProducer implements AliasProducer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractAliasProducer.class);
 
+    private final ReadWriteLock lock = new ReentrantReadWriteLock();
+    private final Lock readLock = lock.readLock();
+    private final Lock writeLock = lock.writeLock();
+
+    /**
+     * 替换数据
+     * key=应用 ID
+     * value = <原始字段,别名字段>
+     */
     private final Map<String, Map<String, String>> data = new HashMap<>();
 
     @Override
     public final void load() {
-        this.data.clear();
-        // "Preconditions" and logging arguments should not require evaluation
-        // this is compliant, because it will not evaluate if log level is above debug.
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("{}  simulate load data form clientPool", this.aliasProducerKey().key());
+
+        this.writeLock.lock();
+
+        try {
+            this.data.clear();
+            // "Preconditions" and logging arguments should not require evaluation
+            // this is compliant, because it will not evaluate if log level is above debug.
+            if (LOGGER.isInfoEnabled()) {
+                LOGGER.info("{}  simulate load data form clientPool", this.aliasProducerKey().key());
+            }
+            this.data.putAll(this.loadData());
+        } finally {
+            this.writeLock.unlock();
         }
-        this.data.putAll(this.loadData());
     }
 
     /**
@@ -70,12 +89,18 @@ public abstract class AbstractAliasProducer implements AliasProducer {
 
     @Override
     public String alias(AliasCenterKey aliasCenterKey, String original) {
-        final Map<String, String> map = this.data.get(aliasCenterKey.getApp());
+        this.readLock.lock();
         String alias = null;
-        if (map != null) {
-            alias = map.get(original);
+
+        try {
+            final Map<String, String> map = this.data.get(aliasCenterKey.getApp());
+            if (map != null) {
+                alias = map.get(original);
+            }
+        } finally {
+            this.readLock.unlock();
         }
-        return (alias == null) ? original : alias;
+        return (alias == null) ? original + "[original]" : alias;
     }
 
 
