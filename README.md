@@ -14,7 +14,7 @@ Java 相关设计，设计模式
 
 * [23种设计模式（design-patterns）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns)
     * [中介者模式（mediator）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-mediator)
-    * [原型模式（prototype）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-mediator)
+    * [原型模式（prototype）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-prototype)
 
 
 * [模拟项目需求](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand)
