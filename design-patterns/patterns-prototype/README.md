@@ -22,11 +22,11 @@
 
 # 类图
 ## WIKI.UML diagram
-![UML diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/wiki-uml/wiki.prototype.uml.jpg)
+![UML diagram](../doc/wiki-uml/wiki.prototype.uml.jpg)
 ## WIKI.Class diagram
-![Class diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/wiki-uml/wiki.prototype.class_diagram.png)
+![Class diagram](../doc/wiki-uml/wiki.prototype.class_diagram.png)
 ## 项目模拟示例.Class diagram
-![Class diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/project-uml/prototype.class_diagram.png)
+![Class diagram](../doc/project-uml/prototype.class_diagram.png)
 
 # 适用场景
 * 优点

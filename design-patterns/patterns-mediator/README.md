@@ -20,11 +20,11 @@
 
 # 类图
 ## WIKI.UML diagram
-![UML diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/wiki-uml/wiki.mediator.uml.jpg)
+![UML diagram](../doc/wiki-uml/wiki.mediator.uml.jpg)
 ## WIKI.Class diagram
-![Class diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/wiki-uml/wiki.mediator.class_diagram.png)
+![Class diagram](../doc/wiki-uml/wiki.mediator.class_diagram.png)
 ## 项目模拟示例.Class diagram
-![Class diagram](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/doc/project-uml/mediator.class_diagram.png)
+![Class diagram](../doc/project-uml/mediator.class_diagram.png)
 
 # 适用场景
 * 优点
