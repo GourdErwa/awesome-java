@@ -20,7 +20,7 @@ Submitting a pull request
 
 Here are a few things you can do that will increase the likelihood of your pull request being accepted:
 
-- Follow the existing code's style [alibaba_checks.xml](./checkstyle/alibaba_checks.xml).
+- Follow the existing code's style [alibaba_checks.xml](./_checkstyle/alibaba_checks.xml).
 - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
@@ -29,7 +29,7 @@ Here are a few things you can do that will increase the likelihood of your pull 
  * Intellij IDEA
  	* use Intellij IDEA plugs（Preferences>Plugins>Browse repositories>${Plugin name}）
     	* [CheckStyle-IDEA](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea)
-    	  active checkstyle.xml（Preferences>Other Settings>Checkstyle>Configuration File>active [alibaba_checks.xml](./checkstyle/alibaba_checks.xml)）
+    	  active checkstyle.xml（Preferences>Other Settings>Checkstyle>Configuration File>active [alibaba_checks.xml](./_checkstyle/alibaba_checks.xml)）
     	* [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)
     	* [FindBugs](https://plugins.jetbrains.com/plugin/3847-findbugs-idea)
     	* [SonarLint](https://plugins.jetbrains.com/plugin/7973-sonarlint)
