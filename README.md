@@ -18,7 +18,7 @@ Java 相关设计，设计模式
 
 
 * [模拟项目需求](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand)
-    * [应用别名替换](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand/alias-replacement)
+    * [应用别名替换](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand/demand-alias-replacement)
 
 
 # 参考链接

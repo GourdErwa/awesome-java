@@ -57,7 +57,7 @@
         <module>design-patterns/patterns-mediator</module>
 
         <!--模拟场景需求-->
-        <module>analog-demand/alias-replacement</module>
+        <module>analog-demand/demand-alias-replacement</module>
     </modules>
 
 

@@ -35,7 +35,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>alias-replacement</artifactId>
+    <artifactId>demand-alias-replacement</artifactId>
 
 
 </project>
