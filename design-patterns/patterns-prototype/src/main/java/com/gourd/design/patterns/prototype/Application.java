@@ -22,19 +22,19 @@
  * THE SOFTWARE.
  *
  */
-package com.gourd.design.patterns.mediator;
+package com.gourd.design.patterns.prototype;
 
-import com.gourd.design.patterns.mediator.colleague.Traveler;
-import com.gourd.design.patterns.mediator.colleague.Aboriginal;
-import com.gourd.design.patterns.mediator.colleague.CollegeStudents;
-import com.gourd.design.patterns.mediator.colleague.Capitalist;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * The type App.
+ * The type Application.
  *
  * @author wei.Li
  */
 public final class Application {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     private Application() {
         //not called
@@ -44,32 +44,29 @@ public final class Application {
      * Program entry point
      *
      * @param args command line args
+     * @throws CloneNotSupportedException the clone not supported exception
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
-        // 房产中间创建
-        final Mediator estateAgentsMediator = new EstateAgentsMediator();
+        final Setting fileSetting = FileSetting.builder()
+            .path("/data/tmp.txt")
+            .build();
+        final Setting jdbcSetting = JdbcSetting.builder()
+            .url("/ip:port/url")
+            .userName("demo")
+            .passWd("demo")
+            .build();
 
-        //旅行者
-        final Traveler traveler = new Traveler();
-        //资本家
-        final Capitalist capitalist = new Capitalist();
-        //大学生
-        final CollegeStudents collegeStudents = new CollegeStudents();
-        //土著
-        final Aboriginal aboriginal = new Aboriginal();
+        LOGGER.info("原始对象:fileSetting hashcode {} , {}", fileSetting.hashCode(), fileSetting);
+        LOGGER.info("原始对象:jdbcSetting hashcode {} , {}", jdbcSetting.hashCode(), jdbcSetting);
 
-        //需求用户连接 中介者
-        estateAgentsMediator
-                .addColleague(traveler)
-                .addColleague(capitalist)
-                .addColleague(collegeStudents)
-                .addColleague(aboriginal);
+        final Object cloneFileSetting = fileSetting.clone();
+        LOGGER.info("clone对象:fileSetting hashcode {} , {}", cloneFileSetting.hashCode(), cloneFileSetting);
 
-        //需求用户发出动作信息
-        traveler.act(Action.RENT);
-        capitalist.act(Action.BUY);
-        collegeStudents.act(Action.LOOK);
-        aboriginal.act(Action.SELLING);
+        final Object cloneJdbcSetting = jdbcSetting.clone();
+        LOGGER.info("clone对象:jdbcSetting hashcode {} , {}", cloneJdbcSetting.hashCode(), cloneJdbcSetting);
+
+
     }
+
 }

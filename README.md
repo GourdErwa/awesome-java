@@ -1,10 +1,10 @@
 
-# Java 设计
+# Java 进阶
 
 ![JDK](https://img.shields.io/badge/JDK-1.8-brightgreen.svg?style=flat-square)
 ![Maven](https://img.shields.io/badge/Maven-3.0-brightgreen.svg?style=flat-square)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
-[![Build Status](https://travis-ci.org/GourdErwa/java-design.svg?branch=master)](https://travis-ci.org/GourdErwa/java-design)
+[![Build Status](https://travis-ci.org/GourdErwa/java-advanced.svg?branch=master)](https://travis-ci.org/GourdErwa/java-advanced)
 
 # 介绍
 Java 相关设计，设计模式
@@ -12,18 +12,19 @@ Java 相关设计，设计模式
 # 快速开始
 >无特殊说明，所有模块 *Application 类为入口函数
 
-* [设计模式（design-patterns）](https://github.com/GourdErwa/java-design/tree/master/design-patterns)
-    * [中介者模式（mediator）](https://github.com/GourdErwa/java-design/tree/master/design-patterns/mediator)
+* [23种设计模式（design-patterns）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns)
+    * [中介者模式（mediator）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-mediator)
+    * [原型模式（prototype）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-mediator)
 
 
-* [模拟项目需求](https://github.com/GourdErwa/java-design/tree/master/analog-demand)
-    * [应用别名替换](https://github.com/GourdErwa/java-design/tree/master/analog-demand/alias-replacement)
+* [模拟项目需求](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand)
+    * [应用别名替换](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand/alias-replacement)
 
 
 # 参考链接
 
 * [wiki](https://en.wikipedia.org/wiki/Design_pattern)
-* [iluwatar](https://github.com/iluwatar/java-design-patterns)
+* [iluwatar](https://github.com/iluwatar/java-advanced-patterns)
 
 # 贡献
 
