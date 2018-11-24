@@ -28,7 +28,7 @@
 ## 项目模拟示例.Class diagram
 ![Class diagram](../doc/project-uml/prototype.class_diagram.png)
 
-# 适用场景
+# 用途
 * 优点
     1. 减少对象创建过程中性能开销
     2. 使用对象的副本创建新对象时统一对象的生成接口，需求变动后仅修改 clone 方法即可。
@@ -50,4 +50,4 @@
 
 # 相关链接
 * [源码](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-prototype)
-* [wiki.Mediator pattern](https://en.wikipedia.org/wiki/Prototype_pattern)
+* [wiki.Mediator pattern](https://en.wikipedia.org/wiki/prototype_pattern)

@@ -53,8 +53,12 @@
 
     <modules>
         <!--23种设计模式-->
+        <!--设计模式-模块模板-->
+        <module>design-patterns/_patterns-module-template</module>
+
         <module>design-patterns/patterns-prototype</module>
         <module>design-patterns/patterns-mediator</module>
+        <module>design-patterns/patterns-visitor</module>
 
         <!--模拟场景需求-->
         <module>analog-demand/demand-alias-replacement</module>

@@ -26,7 +26,7 @@
 ## 项目模拟示例.Class diagram
 ![Class diagram](../doc/project-uml/mediator.class_diagram.png)
 
-# 适用场景
+# 用途
 * 优点
     1. 简化对象之间的关系，将系统的各个对象之间的相互关系进行封装，将各个对象类解耦，使得系统变为松耦合。
     2. 提供系统的灵活性，使得各个对象独立而易于复用。

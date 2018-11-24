@@ -23,21 +23,16 @@
  *
  */
 
-package com.gourd.design.patterns.prototype;
-
 /**
- * 标识为实现原型接口
- *
- * @author wei.Li by 2018-11-21
- * @see Cloneable#clone()
+ * @author wei.Li by 2018-11-24
  */
-public interface Prototype extends Cloneable {
-
-    /**
-     * clone
-     *
-     * @return P
-     * @throws CloneNotSupportedException
-     */
-    Object clone() throws CloneNotSupportedException;
-}
+package com.gourd.design.patterns.visitor;
+/*
+ * 目前电商对于高消费&低消费用户群存在同一商品展示不同价格
+ * 作为商品的购买者，我们认为是访问者 {@link com.gourd.design.patterns.visitor.Visitor}
+ * 作为被浏览的商品，我们认为是元素 {@link com.gourd.design.patterns.visitor.Element}
+ * <p>
+ * 不同消费能力的访问者看到的商品价格不同
+ * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLowPrice) 访问者看到低价商品的行为处理}
+ * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLongPrice) 访问者看到高价商品的行为处理}
+ */

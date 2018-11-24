@@ -23,21 +23,25 @@
  *
  */
 
-package com.gourd.design.patterns.prototype;
+package com.gourd.design.patterns.visitor;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 /**
- * 标识为实现原型接口
+ * 低价类的元素
  *
- * @author wei.Li by 2018-11-21
- * @see Cloneable#clone()
+ * @author wei.Li by 2018-11-24
  */
-public interface Prototype extends Cloneable {
+@AllArgsConstructor
+@Getter
+public class ElementLowPrice implements Element {
 
-    /**
-     * clone
-     *
-     * @return P
-     * @throws CloneNotSupportedException
-     */
-    Object clone() throws CloneNotSupportedException;
+    private String name;
+    private double realPrice;
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

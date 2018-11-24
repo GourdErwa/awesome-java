@@ -23,21 +23,32 @@
  *
  */
 
-package com.gourd.design.patterns.prototype;
+package com.gourd.design.patterns.visitor;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * 标识为实现原型接口
+ * 富豪类型的访问者
  *
- * @author wei.Li by 2018-11-21
- * @see Cloneable#clone()
+ * @author wei.Li by 2018-11-24
  */
-public interface Prototype extends Cloneable {
+public class VisitorRegal implements Visitor {
 
-    /**
-     * clone
-     *
-     * @return P
-     * @throws CloneNotSupportedException
-     */
-    Object clone() throws CloneNotSupportedException;
+    private static final Logger LOGGER = LoggerFactory.getLogger(VisitorRegal.class);
+
+    @Override
+    public void visit(ElementLongPrice element) {
+        final double realPrice = element.getRealPrice();
+        final double result = realPrice * 1.2D;
+        LOGGER.info("土豪 看到[{}]价格真实价[{}],显示价格[{}]", element.getName(), realPrice, result);
+    }
+
+    @Override
+    public void visit(ElementLowPrice element) {
+        final double realPrice = element.getRealPrice();
+        final double result = realPrice * 1.1D;
+        LOGGER.info("土豪 看到[{}]价格真实价[{}],显示价格[{}]", element.getName(), realPrice, result);
+    }
+
 }

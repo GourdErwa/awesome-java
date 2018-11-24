@@ -151,14 +151,14 @@ final class AliasCenter {
      *
      * @param aliasCenterKey 别名替换 key
      * @param originals      待替换原始数据
-     * @param function       转换函数 , 给予 [原始,别名] 2个字符，自由组合为结果字符
+     * @param strategy       转换策略函数 , 给予 [原始,别名] 2个字符，自由组合为结果字符
      * @return the string [ ]
      */
     String[] aliasReplace(AliasCenterKey aliasCenterKey,
                           String[] originals,
-                          BiFunction<String, String, String> function) {
+                          BiFunction<String, String, String> strategy) {
 
-        return this.aliasReplace(aliasCenterKey, Arrays.asList(originals), function).toArray(new String[0]);
+        return this.aliasReplace(aliasCenterKey, Arrays.asList(originals), strategy).toArray(new String[0]);
     }
 
     /**

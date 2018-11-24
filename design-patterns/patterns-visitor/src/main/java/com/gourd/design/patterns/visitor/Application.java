@@ -22,22 +22,40 @@
  * THE SOFTWARE.
  *
  */
-
-package com.gourd.design.patterns.prototype;
+package com.gourd.design.patterns.visitor;
 
 /**
- * 标识为实现原型接口
+ * The type Application.
  *
- * @author wei.Li by 2018-11-21
- * @see Cloneable#clone()
+ * @author wei.Li
  */
-public interface Prototype extends Cloneable {
+public final class Application {
+
+    private Application() {
+        //not called
+    }
 
     /**
-     * clone
+     * Program entry point
      *
-     * @return P
-     * @throws CloneNotSupportedException
+     * @param args command line args
      */
-    Object clone() throws CloneNotSupportedException;
+    public static void main(String[] args) {
+
+        //富豪访问者
+        final VisitorRegal visitorRegal = new VisitorRegal();
+        //学生访问者
+        final VisitorStudent visitorStudent = new VisitorStudent();
+
+        //奢侈品
+        final Element longPriceElement = new ElementLongPrice("奢侈品", 1000000d);
+        longPriceElement.accept(visitorRegal);
+        longPriceElement.accept(visitorStudent);
+
+        //低价小物品
+        final Element lowPriceElement = new ElementLowPrice("小物品", 10d);
+        lowPriceElement.accept(visitorRegal);
+        lowPriceElement.accept(visitorStudent);
+    }
+
 }

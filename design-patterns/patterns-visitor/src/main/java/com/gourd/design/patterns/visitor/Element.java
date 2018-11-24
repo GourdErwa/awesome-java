@@ -23,21 +23,20 @@
  *
  */
 
-package com.gourd.design.patterns.prototype;
+package com.gourd.design.patterns.visitor;
 
 /**
- * 标识为实现原型接口
+ * 被放问的元素信息.
  *
- * @author wei.Li by 2018-11-21
- * @see Cloneable#clone()
+ * @author wei.Li by 2018-11-24
  */
-public interface Prototype extends Cloneable {
+public interface Element {
 
     /**
-     * clone
+     * 接收访问者访问自身.
      *
-     * @return P
-     * @throws CloneNotSupportedException
+     * @param visitor the visitor
      */
-    Object clone() throws CloneNotSupportedException;
+    void accept(Visitor visitor);
+
 }
