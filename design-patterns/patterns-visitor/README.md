@@ -60,3 +60,7 @@
 * [源码](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns/patterns-visitor)
 * [wiki.Mediator pattern](https://en.wikipedia.org/wiki/visitor_pattern)
 * org.dom4j.Visitor
+* com.sun.tools.classfile.Type#Visitor
+* org.springframework.asm.AnnotationVisitor
+* com.google.inject.spi.BindingScopingVisitor
+* Elastic源码中典型应用场景 org.elasticsearch.common.inject.spi.ElementVisitor&org.elasticsearch.common.inject.spi.Element

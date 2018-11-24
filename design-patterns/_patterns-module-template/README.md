@@ -1,4 +1,5 @@
 
+# 模块创建模板
 # 23种设计模式-${pattern-cn}（${patternName} pattern）
 
 # 定义
