@@ -4,9 +4,6 @@
 # 定义
 >表示一个作用于某对象结构中的各元素的操作。它使你可以在不改变各元素类的前提下定义作用于这些元素的新操作。
 从定义可以看出结构对象是使用访问者模式必备条件，而且这个结构对象必须存在遍历自身各个对象的方法。这便类似于Java语言当中的collection概念了。
-访问者模式主要包含如下几个角色：
-
-
 
 # 概述
 >可以解决哪些问题？
@@ -22,6 +19,8 @@
 ![UML diagram](../doc/wiki-uml/wiki.visitor.uml.jpg)
 ## WIKI.Class diagram
 ![Class diagram](../doc/wiki-uml/wiki.visitor.class_diagram.png)
+
+访问者模式主要包含如下几个角色：
 ``Visitor``: 抽象访问者。为该对象结构中的ConcreteElement的每一个类声明的一个操作。
 ``ConcreteVisitor``: 具体访问者。实现Visitor申明的每一个操作，每一个操作实现算法的一部分。
 ``Element``: 抽象元素。定义一个Accept操作，它以一个访问者为参数。

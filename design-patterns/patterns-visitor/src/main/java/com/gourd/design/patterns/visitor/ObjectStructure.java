@@ -22,43 +22,41 @@
  * THE SOFTWARE.
  *
  */
+
 package com.gourd.design.patterns.visitor;
 
-/**
- * The type Application.
- *
- * @author wei.Li
- */
-public final class Application {
+import java.util.ArrayList;
+import java.util.List;
 
-    private Application() {
-        //not called
+/**
+ * 结构对象：元素产生者，一般容纳在多个不同类、不同接口的容器，如List、Set、Map等
+ *
+ * @author wei.Li by 2018-11-24
+ */
+class ObjectStructure {
+
+    private List<Element> elements = new ArrayList<>();
+
+    /**
+     * 执行方法操作
+     *
+     * @param visitor the visitor
+     */
+    void action(Visitor visitor) {
+        for (Element element : elements) {
+            element.accept(visitor);
+        }
     }
 
     /**
-     * Program entry point
+     * 添加一个新元素
      *
-     * @param args command line args
+     * @param element the element
+     * @return the object structure
      */
-    public static void main(String[] args) {
-
-        //富豪访问者
-        final VisitorRegal visitorRegal = new VisitorRegal();
-        //学生访问者
-        final VisitorStudent visitorStudent = new VisitorStudent();
-
-        //奢侈品
-        final Element longPriceElement = new ElementLongPrice("奢侈品", 1000000d);
-        //低价小物品
-        final Element lowPriceElement = new ElementLowPrice("小物品", 10d);
-
-        //结构对象：元素产生者，一般容纳在多个不同类、不同接口的容器，如List、Set、Map等
-        final ObjectStructure os = new ObjectStructure()
-            .add(longPriceElement)
-            .add(lowPriceElement);
-
-        os.action(visitorRegal);
-        os.action(visitorStudent);
+    ObjectStructure add(Element element) {
+        elements.add(element);
+        return this;
     }
 
 }

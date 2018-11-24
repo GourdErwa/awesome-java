@@ -62,5 +62,4 @@ public class EstateAgentsMediator implements Mediator {
         }
     }
 
-
 }
