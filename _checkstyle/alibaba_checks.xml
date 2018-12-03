@@ -207,9 +207,9 @@
         <module name="NestedIfDepth">
             <property name="max" value="3"/>
         </module>
-        <!-- 检查未被注释的main方法,排除以 com.gourd.alias.replacement.App* 结尾命名的类 -->
+        <!-- 检查未被注释的main方法,排除以 Application 结尾命名的类 -->
         <module name="UncommentedMain">
-            <property name="excludedClasses" value=".*\.Application"/>
+            <property name="excludedClasses" value=".*[Application,Test]$"/>
         </module>
         <!-- 禁止使用System.out.println -->
         <module name="Regexp">
