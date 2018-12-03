@@ -63,4 +63,5 @@
 * com.sun.tools.classfile.Type#Visitor
 * org.springframework.asm.AnnotationVisitor
 * com.google.inject.spi.BindingScopingVisitor
-* Elastic源码中典型应用场景 org.elasticsearch.common.inject.spi.ElementVisitor&org.elasticsearch.common.inject.spi.Element
+* com.google.inject.spi.ElementVisitor<V> & com.google.inject.spi.Element
+* Elastic源码中典型应用场景，命名规范与模式定义一致 org.elasticsearch.common.inject.spi.ElementVisitor&org.elasticsearch.common.inject.spi.Element

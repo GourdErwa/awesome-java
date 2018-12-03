@@ -209,7 +209,7 @@
         </module>
         <!-- 检查未被注释的main方法,排除以 com.gourd.alias.replacement.App* 结尾命名的类 -->
         <module name="UncommentedMain">
-            <property name="excludedClasses" value=".*com.gourd.alias.replacement.App*$"/>
+            <property name="excludedClasses" value=".*\.Application"/>
         </module>
         <!-- 禁止使用System.out.println -->
         <module name="Regexp">

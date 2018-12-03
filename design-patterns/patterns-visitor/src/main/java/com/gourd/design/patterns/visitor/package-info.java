@@ -33,6 +33,8 @@ package com.gourd.design.patterns.visitor;
  * 作为被浏览的商品，我们认为是元素 {@link com.gourd.design.patterns.visitor.Element}
  * <p>
  * 不同消费能力的访问者看到的商品价格不同
- * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLowPrice) 访问者看到低价商品的行为处理}
- * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLongPrice) 访问者看到高价商品的行为处理}
+ * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLowPrice)
+ * 访问者看到低价商品的行为处理}
+ * {@linkplain com.gourd.design.patterns.visitor.Visitor#visit(com.gourd.design.patterns.visitor.ElementLongPrice)
+ * 访问者看到高价商品的行为处理}
  */

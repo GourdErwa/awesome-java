@@ -40,10 +40,11 @@ public final class Application {
         //not called
     }
 
+
     /**
-     * Program entry point
+     * The entry point of application.
      *
-     * @param args command line args
+     * @param args the input arguments
      * @throws CloneNotSupportedException the clone not supported exception
      */
     public static void main(String[] args) throws CloneNotSupportedException {

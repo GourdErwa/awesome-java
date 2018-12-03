@@ -22,6 +22,9 @@ Java 相关设计，设计模式
     * [应用别名替换](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand/demand-alias-replacement)
 
 
+* [并发编程](https://github.com/GourdErwa/java-advanced/tree/master/concurrent)
+    * [framework-disruptor](https://github.com/GourdErwa/java-advanced/tree/master/concurrent/framework-disruptor)
+
 # 参考链接
 
 * [wiki](https://en.wikipedia.org/wiki/Design_pattern)

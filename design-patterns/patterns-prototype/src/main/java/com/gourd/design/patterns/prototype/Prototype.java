@@ -36,8 +36,8 @@ public interface Prototype extends Cloneable {
     /**
      * clone
      *
-     * @return P
-     * @throws CloneNotSupportedException
+     * @return Object
+     * @throws CloneNotSupportedException the clone not supported exception
      */
     Object clone() throws CloneNotSupportedException;
 }

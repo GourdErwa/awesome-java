@@ -40,10 +40,10 @@
         <lombok.version>1.18.4</lombok.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
-
+        <disruptor.version>3.4.2</disruptor.version>
         <!-- https://github.com/checkstyle/checkstyle -->
-        <maven.checkstyle.file>.checkstyle/alibaba_checks.xml</maven.checkstyle.file>
-        <maven.checkstyle.suppressions.file>.checkstyle/checkstyle-suppressions.xml</maven.checkstyle.suppressions.file>
+        <maven.checkstyle.file>_checkstyle/alibaba_checks.xml</maven.checkstyle.file>
+        <maven.checkstyle.suppressions.file>_checkstyle/checkstyle-suppressions.xml</maven.checkstyle.suppressions.file>
 
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven.sevntu.checkstyle.plugin.version>1.32.0</maven.sevntu.checkstyle.plugin.version>
@@ -55,6 +55,7 @@
         <!--23种设计模式-->
         <!--设计模式-模块模板-->
         <module>design-patterns/_patterns-module-template</module>
+        <module>design-patterns/_patterns_example</module>
 
         <module>design-patterns/patterns-prototype</module>
         <module>design-patterns/patterns-mediator</module>
@@ -62,6 +63,9 @@
 
         <!--模拟场景需求-->
         <module>analog-demand/demand-alias-replacement</module>
+
+        <!--并发编程-->
+        <module>concurrent/framework-disruptor</module>
     </modules>
 
 
@@ -113,8 +117,9 @@
 
             <!--
             checkstyle plug-in. https://github.com/checkstyle/checkstyle/
+            checkstyle 的详细结果信息被存放在target/checkstyle-result.xml中。下面是一个示例。
             -->
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.0.0</version>
@@ -126,7 +131,7 @@
                         </goals>
                         <phase>validate</phase>
                         <configuration>
-                            &lt;!&ndash;https://github.com/checkstyle/checkstyle/blob/master/config&ndash;&gt;
+                            <!--https://github.com/checkstyle/checkstyle/blob/master/config-->
                             <configLocation>${maven.checkstyle.file}</configLocation>
                             <suppressionsLocation>${maven.checkstyle.suppressions.file}</suppressionsLocation>
                             <encoding>UTF-8</encoding>
@@ -136,13 +141,13 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
 
 
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.6</version>
+                <version>3.11.0</version>
                 <configuration>
                     <failOnViolation>true</failOnViolation>
                     <failurePriority>5</failurePriority>
@@ -158,7 +163,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
 
         </plugins>
     </build>
