@@ -1,26 +1,19 @@
 /*
  *
- * The MIT License
- * Copyright © 2018-2018 GourdErwa
+ * The MIT License Copyright © 2018-2018 GourdErwa
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ * Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
 package com.gourd.alias.replacement;
@@ -38,28 +31,24 @@ import java.util.Map;
 import java.util.function.BiFunction;
 
 /**
- * 别名替换中心.
- * 使用示例参考 {@linkplain Application}
+ * 别名替换中心. 使用示例参考 {@linkplain Application}
  *
  * @author wei.Li by 2018/10/23
  */
 final class AliasCenter {
 
     /**
-     * 转换函数
-     * (original, alias) -> original(alias)
+     * 转换函数 (original, alias) -> original(alias)
      */
-    static final BiFunction<String, String, String> BI_FUNCTION_PARENTHESES =
-        (original, alias) -> original + "-(" + alias + ")";
+    static final BiFunction<String, String, String> BI_FUNCTION_PARENTHESES = (original, alias) -> original + "-("
+        + alias + ")";
     private static final Logger LOGGER = LoggerFactory.getLogger(AliasCenter.class);
     /**
      * 注册别名生产者
      */
     private final Map<String, AliasProducer> register = new HashMap<>();
     /**
-     * 标识是否启动
-     * 启动前:不可执行别名注册操作、重置数据操作
-     * 启动后:不可执行注册操作
+     * 标识是否启动 启动前:不可执行别名注册操作、重置数据操作 启动后:不可执行注册操作
      */
     private boolean start = false;
 
@@ -89,18 +78,15 @@ final class AliasCenter {
         final String key = aliasProducerKey.key();
         final AliasProducer producer = this.register.get(key);
         if (producer != null) {
-            throw new AliasException("aliasProducerKey:" + key + ", class "
-                + aliasProducer.getClass().getSimpleName() + " already exists");
+            throw new AliasException("aliasProducerKey:" + key + ", class " + aliasProducer.getClass().getSimpleName()
+                + " already exists");
         }
         this.register.put(key, aliasProducer);
         return this;
     }
 
     /**
-     * 启动生产者中心.
-     * 启动逻辑包括：
-     * #修改启动状态为已启动
-     * #载入所有别名生产者数据
+     * 启动生产者中心. 启动逻辑包括： #修改启动状态为已启动 #载入所有别名生产者数据
      *
      * @return the alias center
      */
@@ -110,11 +96,8 @@ final class AliasCenter {
         LOGGER.info("AliasCenter start() start...");
         LOGGER.info("AliasCenter reLoadAliasProducer ...");
         this.reLoadAliasProducer();
-        this.register.forEach(
-            (s, aliasProducer) ->
-                LOGGER.info("AliasCenter registered key:{} aliasProducer:{}",
-                    s, aliasProducer.getClass().getSimpleName())
-        );
+        this.register.forEach((s, aliasProducer) -> LOGGER.info("AliasCenter registered key:{} aliasProducer:{}", s,
+            aliasProducer.getClass().getSimpleName()));
         LOGGER.info("AliasCenter start() start...");
         LOGGER.info("AliasCenter start() end...");
         return this;
@@ -154,9 +137,8 @@ final class AliasCenter {
      * @param strategy       转换策略函数 , 给予 [原始,别名] 2个字符，自由组合为结果字符
      * @return the string [ ]
      */
-    String[] aliasReplace(AliasCenterKey aliasCenterKey,
-                          String[] originals,
-                          BiFunction<String, String, String> strategy) {
+    String[]
+    aliasReplace(AliasCenterKey aliasCenterKey, String[] originals, BiFunction<String, String, String> strategy) {
 
         return this.aliasReplace(aliasCenterKey, Arrays.asList(originals), strategy).toArray(new String[0]);
     }
@@ -169,27 +151,26 @@ final class AliasCenter {
      * @param function       转换函数 , 给予 [原始,别名] 2个字符，自由组合为结果字符
      * @return the list
      */
-    private List<String> aliasReplace(AliasCenterKey aliasCenterKey,
-                                      List<String> originals,
+    private List<String> aliasReplace(AliasCenterKey aliasCenterKey, List<String> originals,
                                       BiFunction<String, String, String> function) {
 
         this.checkNotStart();
-        //匹配对应别名生产者
+        // 匹配对应别名生产者
         final AliasProducer aliasProducer = register.get(aliasCenterKey.getAliasProducerKey().key());
         if (aliasProducer == null) {
             throw new AliasException("aliasCenterKey:" + aliasCenterKey.toString() + " doesn't exist");
         }
-        //待返回数据集
+        // 待返回数据集
         final List<String> r = new ArrayList<>();
-        //替换后的数据集
+        // 替换后的数据集
         final List<String> alias = aliasProducer.alias(aliasCenterKey, originals);
 
-        //校验数据是否合法，保证原始数据集合与替换别名后集合数据一致
+        // 校验数据是否合法，保证原始数据集合与替换别名后集合数据一致
         if (alias.size() != originals.size()) {
             throw new AliasException("alias originals size unlikeness");
         }
 
-        //使用 BiFunction 函数进行数据处理
+        // 使用 BiFunction 函数进行数据处理
         for (int i = 0; i < originals.size(); i++) {
             final String original = originals.get(i);
             final String alia = alias.get(i);
@@ -206,7 +187,7 @@ final class AliasCenter {
             try {
                 aliasProducer.close();
             } catch (Exception ignored) {
-                //Empty on purpose or missing piece of code
+                // Empty on purpose or missing piece of code
             }
         }
     }
