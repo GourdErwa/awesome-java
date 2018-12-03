@@ -3,10 +3,10 @@
 ## 编码惯例
 团队合作中编码管理是非常重要的。它不仅使得代码整齐及整洁，它也节省了许多的工作。不同的代码惯例（自动格式化）将会导致不必要的代码改动使得在代码复审和合并时需要更多的努力。
 
-对于 Java 代码，我们使用 Eclipse 默认的格式化配置，其中一个改动允许长行。
+对于 Java 代码，我们使用 Intellij IDEA 默认的格式化配置，其中一个改动auto import。
 
-* 对于 Eclipse 开发者，无需手动设置。代码格式化配置 _setting/eclipse.formatter/org.eclipse.jdt.core.prefs 在 git 仓库。当项目被引入时，您的 IDE 应该自动配置。
-* 对于 Intellij IDEA 开发者，您需要安装 “Eclipse Code Formatter” 并手动将 Eclipse 格式化配置加载到您的 IDE。详细内容请看搭建开发环境。
+* 对于 Eclipse 开发者，稍后统一格式化风格，目前因 Eclipse Code Formatter 与 check-style.xml 冲突。
+* 对于 Intellij IDEA 开发者，详细内容请看搭建开发环境。
 
 我们在 maven 中有 checkstyle plugin 能强制进行规范检查。
 对于 JavaScript，XML 和其它编码，请使用空格来缩进。作为常规，请保持代码格式与现有行一致。目前没有其他的强制措施。
@@ -19,6 +19,7 @@
 惯例是 words-separated-by-dash.ext，所有的字符要小写。
 基本原理：要和 hadoop 配置文件命名一致，即。hdfs-site.xml
 >正面例子：kylin-server-log4j.properties
+
 >反面例子：kylin_hive_conf.xml，应该为 kylin-hive-conf.xml
 
 # 搭建开发环境

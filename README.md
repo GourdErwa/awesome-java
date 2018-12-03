@@ -12,6 +12,7 @@ Java 相关设计，设计模式
 # 快速开始
 
 >开发环境搭建参考 [DEV_ENV.md](./DEV_ENV.md)
+
 >无特殊说明，所有模块 *Application 类为入口函数
 
 * [23种设计模式（design-patterns）](https://github.com/GourdErwa/java-advanced/tree/master/design-patterns)
