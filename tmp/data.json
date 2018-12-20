@@ -1,0 +1,30 @@
+{
+    "dataUnix": 1543557361,
+    "indexType": "EVENT_MESSAGE_REAL",
+    "metricParam": {
+        "app": "gs_pro",
+        "appGroup": "SparkJob-REAL",
+        "endPoint": "GameRealKafkaJob"
+    },
+    "metricType": "index",
+    "cObject": {
+        "appId": "game_skuld_01",
+        "eventType": "currency_3_l",
+        "error": false,
+        "numRecords": 1000,
+
+        //A类型|处理时间与该批数据时间最小值的差（区分正负值） /秒    识别是否处理当前数据
+        //A类型|处理时间与该批数据时间最大值的差（区分正负值） /秒    识别是否处理了非当前的数据（将秒数分别除以不同的被除数得出相差时间单位，例如超出4小时的差值时间后任务需要重新跑）
+
+        //B类型|http 接收延迟时间最小值 /秒     识别是否包含正常数据
+        //B类型|http 接收延迟时间平均值 /秒     识别是否包含数据接收趋势
+        //B类型|http 接收延迟时间最大值 /秒      识别是否包含异常数据（与平均值最小值比较后落差较大说明部分数据延迟较高）
+
+    }
+}
+
+#不区分每个服的延迟时间，出问题手动查具体延迟较高服
+# A类型 数据必须实时处理
+
+
+

@@ -67,6 +67,10 @@
 
         <!--并发编程-->
         <module>concurrent/framework-disruptor</module>
+
+        <!--大数据相关-->
+        <module>big-data/bd-beam</module>
+
     </modules>
 
 
