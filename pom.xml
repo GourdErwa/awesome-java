@@ -41,6 +41,8 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <disruptor.version>3.4.2</disruptor.version>
+        <beam.version>2.8.0</beam.version>
+        <kafka_2.version>2.2.0</kafka_2.version>
         <!-- https://github.com/checkstyle/checkstyle -->
         <maven.checkstyle.file>_setting/checkstyle/alibaba_checks.xml</maven.checkstyle.file>
         <maven.checkstyle.suppressions.file>_setting/checkstyle/checkstyle-suppressions.xml
@@ -57,10 +59,12 @@
         <!--设计模式-模块模板-->
         <module>design-patterns/_patterns-module-template</module>
         <module>design-patterns/_patterns_example</module>
-
         <module>design-patterns/patterns-prototype</module>
         <module>design-patterns/patterns-mediator</module>
         <module>design-patterns/patterns-visitor</module>
+
+        <!--模拟场景需求-->
+        <module>common/common_logback</module>
 
         <!--模拟场景需求-->
         <module>analog-demand/demand-alias-replacement</module>
@@ -68,14 +72,61 @@
         <!--并发编程-->
         <module>concurrent/framework-disruptor</module>
 
+        <module>leetcode/leetcode-array</module>
+
         <!--大数据相关-->
         <module>big-data/bd-beam</module>
+        <module>big-data/bd-kafka2</module>
 
     </modules>
 
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.beam</groupId>
+                <artifactId>beam-sdks-java-core</artifactId>
+                <version>${beam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.beam</groupId>
+                <artifactId>beam-runners-direct-java</artifactId>
+                <version>${beam.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.12</artifactId>
+                <version>${kafka_2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -83,22 +134,18 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 
