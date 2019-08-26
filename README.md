@@ -5,7 +5,7 @@
 ![Maven](https://img.shields.io/badge/Maven-3.0-brightgreen.svg?style=flat-square)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 [![Build Status](https://travis-ci.org/GourdErwa/java-advanced.svg?branch=master)](https://travis-ci.org/GourdErwa/java-advanced)
-
+[![CodeFactor](https://www.codefactor.io/repository/github/gourderwa/java-advanced/badge)](https://www.codefactor.io/repository/github/gourderwa/java-advanced)
 # 介绍
 Java 相关设计，设计模式
 
