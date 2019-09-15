@@ -62,7 +62,7 @@
         <module>design-patterns/patterns-prototype</module>
         <module>design-patterns/patterns-mediator</module>
         <module>design-patterns/patterns-visitor</module>
-
+        <module>design-patterns/patterns-proxy</module>
         <!--模拟场景需求-->
         <module>common/common_logback</module>
 
