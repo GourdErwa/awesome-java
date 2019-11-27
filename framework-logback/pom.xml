@@ -31,11 +31,13 @@
         <groupId>io.gourd</groupId>
         <artifactId>java-advanced</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>./../../pom.xml</relativePath>
+        <relativePath>./../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demand-alias-replacement</artifactId>
+    <artifactId>framework-logback</artifactId>
 
+    <dependencies>
+    </dependencies>
 
 </project>

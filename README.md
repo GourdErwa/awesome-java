@@ -1,29 +1,16 @@
 
 # Java 进阶
-
 ![JDK](https://img.shields.io/badge/JDK-1.8-brightgreen.svg?style=flat-square)
 ![Maven](https://img.shields.io/badge/Maven-3.0-brightgreen.svg?style=flat-square)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 [![Build Status](https://travis-ci.org/GourdErwa/java-advanced.svg?branch=master)](https://travis-ci.org/GourdErwa/java-advanced)
 [![CodeFactor](https://www.codefactor.io/repository/github/gourderwa/java-advanced/badge)](https://www.codefactor.io/repository/github/gourderwa/java-advanced)
-# 介绍
-Java 相关设计，设计模式
 
 # 快速开始
-
 >开发环境搭建参考 [DEV_ENV.md](./DEV_ENV.md)
-
 >无特殊说明，所有模块 *Application 类为入口函数
 
-* [模拟项目需求](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand)
-    * [应用别名替换](https://github.com/GourdErwa/java-advanced/tree/master/analog-demand/demand-alias-replacement)
-
-
-* [并发编程](https://github.com/GourdErwa/java-advanced/tree/master/concurrent)
-    * [disruptor](https://github.com/GourdErwa/java-advanced/tree/master/concurrent/framework-disruptor)
-
 # 参考链接
-
 * [wiki](https://en.wikipedia.org/wiki/Design_pattern)
 * [iluwatar](https://github.com/iluwatar/java-advanced-patterns)
 
@@ -36,11 +23,8 @@ Java 相关设计，设计模式
 * [markdown语法](https://guides.github.com/features/mastering-markdown/)
 
 # 联系
-
-* QQ 群：348527861
-* email：gourderwa@163.com
+* Email：gourderwa@163.com
 
 # License
-
 [MIT license](https://en.wikipedia.org/wiki/MIT_License) 许可
 

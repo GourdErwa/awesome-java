@@ -29,8 +29,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gourd</groupId>
-    <artifactId>erwa</artifactId>
+    <groupId>io.gourd</groupId>
+    <artifactId>java-advanced</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -55,24 +55,12 @@
     </properties>
 
     <modules>
-        <!--23种设计模式-->
-        <!--设计模式-模块模板-->
-        <module>design-patterns/_patterns-module-template</module>
-        <module>design-patterns/_patterns-template</module>
-        <module>design-patterns/patterns-prototype</module>
-        <module>design-patterns/patterns-mediator</module>
-        <module>design-patterns/patterns-visitor</module>
-
-        <!--模拟场景需求-->
-        <module>common/common_logback</module>
-
         <!--模拟场景需求-->
         <module>analog-demand/demand-alias-replacement</module>
 
         <!--并发编程-->
-        <module>concurrent/framework-disruptor</module>
-
-        <module>leetcode/leetcode-array</module>
+        <module>framework-disruptor</module>
+        <module>framework-logback</module>
 
     </modules>
 

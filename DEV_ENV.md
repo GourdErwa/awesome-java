@@ -33,14 +33,14 @@
 
 ## 安装 IDE [Lombok](https://www.projectlombok.org/setup/Intellij) 插件
 
-![Lombok](./doc/DEV_ENV/Lombok.png)
+![Lombok](./docs/DEV_ENV/Lombok.png)
 
 
 ## 安装 IDE Check-Style 插件
 目前使用 alibaba_checks.xml ，位于GitHub [alibaba_checks.xml](./_setting/checkstyle/alibaba_checks.xml)
 pom 中集成 maven-checkstyle-plugin 插件， ${maven.checkstyle.file} 配置对应目录，默认无需修改
 
-![Check.Style](./doc/DEV_ENV/Check.Style.png)
+![Check.Style](./docs/DEV_ENV/Check.Style.png)
 
 
 ## 安装 IDE Eclipse Code Formatter 格式化插件
@@ -51,12 +51,12 @@ pom 中集成 maven-checkstyle-plugin 插件， ${maven.checkstyle.file} 配置�
 
 * Preference => Code Style => Java import [Code.Style.gourderwa.xml](./_setting/intellij/Code.Style.gourderwa.xml)，
 
-![Code.Java.Style](./doc/DEV_ENV/Code.Style.gourderwa.png)
+![Code.Java.Style](./docs/DEV_ENV/Code.Style.gourderwa.png)
 
 
 * 禁用 Intellij IDEA 的 “Optimize imports on the fly”
 
-![Auto.Import](./doc/DEV_ENV/Auto.Import.png)
+![Auto.Import](./docs/DEV_ENV/Auto.Import.png)
 
 ## 设置 IDE License 头部模板
 
@@ -87,8 +87,8 @@ THE SOFTWARE.
 
 1. 设置 Copyright.Profiles
 
-![Copyright.Profiles](./doc/DEV_ENV/Copyright.Profiles.png)
+![Copyright.Profiles](./docs/DEV_ENV/Copyright.Profiles.png)
 
 2. 激活 Copyright.Profiles
 
-![Copyright](./doc/DEV_ENV/Copyright.png)
+![Copyright](./docs/DEV_ENV/Copyright.png)
