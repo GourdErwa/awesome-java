@@ -1,0 +1,4 @@
+rootProject.name = 'java-advanced'
+include 'demand-alias-replacement'
+include 'java-concurrency'
+
