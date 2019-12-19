@@ -36,7 +36,9 @@ subprojects {
         compile "org.slf4j:slf4j-api:${slf4jVersion}"
         compile "ch.qos.logback:logback-core:${logbackVersion}"
         compile "ch.qos.logback:logback-classic:${logbackVersion}"
-        compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+        // compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+        compileOnly 'org.projectlombok:lombok:1.18.10'
+        annotationProcessor 'org.projectlombok:lombok:1.18.10'
         testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.0-M1'
     }
 
