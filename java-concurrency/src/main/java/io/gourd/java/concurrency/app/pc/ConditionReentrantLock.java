@@ -10,36 +10,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 存在 BUG
- * 使用 wait/notifyAll/ReentrantLock 实现的多生产者消费者
+ * 使用 Condition/ReentrantLock 实现的多生产者消费者
  * <p>
  * 存在问题：
  * - 生产者消费者竞争同一把锁，性能较低
- * TODO 异常处理
- * <p>
- * Exception in thread "生产者-4" Exception in thread "生产者-5" Exception in thread "生产者-6" Exception in thread "生产者-7" java.lang.IllegalMonitorStateException
- * at java.lang.Object.wait(Native Method)
- * at java.lang.Object.wait(Object.java:502)
- * at io.gourd.java.concurrency.app.pc.WaitLock.produce(WaitLock.java:33)
- * at io.gourd.java.concurrency.app.pc.CarFactory$Producer.run(CarFactory.java:30)
- * at java.lang.Thread.run(Thread.java:748)
- * java.lang.IllegalMonitorStateException
- * at java.lang.Object.wait(Native Method)
- * at java.lang.Object.wait(Object.java:502)
- * at io.gourd.java.concurrency.app.pc.WaitLock.produce(WaitLock.java:33)
- * at io.gourd.java.concurrency.app.pc.CarFactory$Producer.run(CarFactory.java:30)
- * at java.lang.Thread.run(Thread.java:748)
- * java.lang.IllegalMonitorStateException
- * at java.lang.Object.wait(Native Method)
- * at java.lang.Object.wait(Object.java:502)
- * at io.gourd.java.concurrency.app.pc.WaitLock.produce(WaitLock.java:33)
- * at io.gourd.java.concurrency.app.pc.CarFactory$Producer.run(CarFactory.java:30)
- * at java.lang.Thread.run(Thread.java:748)
- * java.lang.IllegalMonitorStateException
- * at java.lang.Object.wait(Native Method)
- * at java.lang.Object.wait(Object.java:502)
- * at io.gourd.java.concurrency.app.pc.WaitLock.produce(WaitLock.java:33)
- * at io.gourd.java.concurrency.app.pc.CarFactory$Producer.run(CarFactory.java:30)
- * at java.lang.Thread.run(Thread.java:748)
  *
  * @author Li.Wei by 2019/12/19
  */
