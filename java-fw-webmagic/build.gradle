@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'io.groud'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'us.codecraft', name: 'webmagic-core', version: '0.7.3'
+    compile group: 'us.codecraft', name: 'webmagic-extension', version: '0.7.3'
+}

@@ -2,4 +2,7 @@ rootProject.name = 'java-advanced'
 include 'demand-alias-replacement'
 include 'java-concurrency'
 include 'java-jvm'
+include 'java-core'
+include 'java-fw-webmagic'
+include 'java-computer-theory'
 
