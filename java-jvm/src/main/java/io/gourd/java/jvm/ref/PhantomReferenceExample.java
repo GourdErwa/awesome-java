@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 虚引用结合 ReferenceQueue 队列使用说明
+ *
  * @author Li.Wei by 2020/1/4
  */
 @Slf4j
