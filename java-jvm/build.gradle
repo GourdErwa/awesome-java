@@ -1,3 +1,5 @@
-
 dependencies {
+    // http://openjdk.java.net/projects/code-tools/jol/
+    compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.9'
+    compile group: 'org.openjdk.jol', name: 'jol-cli', version: '0.9'
 }
