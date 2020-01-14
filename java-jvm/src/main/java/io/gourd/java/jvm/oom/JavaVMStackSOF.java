@@ -40,7 +40,7 @@ public class JavaVMStackSOF {
  * 虚拟机的栈内存允许动态扩展，当扩展栈容量无法申请到足够的内存时，将抛出 OutOfMemoryError 异常
  * <p>
  * Exception in thread "main" java.lang.OutOfMemoryError: unable to create native thread
- *
+ * <p>
  * 不推荐执行，会导致系统假死
  */
 class JavaVMStackOOM {

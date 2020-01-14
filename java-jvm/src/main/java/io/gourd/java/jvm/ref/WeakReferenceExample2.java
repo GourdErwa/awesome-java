@@ -3,8 +3,6 @@ package io.gourd.java.jvm.ref;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.lang.ref.WeakReference;
-
 /**
  * -Xmx200m -XX:+PrintGC
  *

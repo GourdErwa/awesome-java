@@ -5,4 +5,5 @@ include 'java-jvm'
 include 'java-core'
 include 'java-fw-webmagic'
 include 'java-computer-theory'
+include 'java-data-structures'
 

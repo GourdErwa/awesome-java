@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 使用 wait/notifyAll/synchronized 实现的多生产者消费者
- *
+ * <p>
  * 存在问题：
  * - 生产者消费者竞争同一把锁，性能较低
  *

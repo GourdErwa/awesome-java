@@ -3,8 +3,13 @@ package io.gourd.java.concurrency;
 public class VolatileNumberRange {
     private int lower, upper;
 
-    public int getLower() { return lower; }
-    public int getUpper() { return upper; }
+    public int getLower() {
+        return lower;
+    }
+
+    public int getUpper() {
+        return upper;
+    }
 
     public void setLower(int value) {
         if (value > upper)
