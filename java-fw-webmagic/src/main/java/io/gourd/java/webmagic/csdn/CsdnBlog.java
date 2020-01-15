@@ -1,7 +1,5 @@
 package io.gourd.java.webmagic.csdn;
 
-import lombok.AllArgsConstructor;
-
 /**
  * @author Li.Wei by 2019/12/28
  */

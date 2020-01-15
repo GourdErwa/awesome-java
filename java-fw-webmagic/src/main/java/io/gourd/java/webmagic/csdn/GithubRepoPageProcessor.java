@@ -24,10 +24,10 @@ public class GithubRepoPageProcessor implements PageProcessor {
     private static final String PAGE_DETAILS = "https://blog.csdn.net/" + USERNAME + "/article/details/\\d+";
 
     private Site site = Site.me().setRetryTimes(3).setSleepTime(1000 * 2).setTimeOut(20000)
-        .addHeader("accept","*/*")
+        .addHeader("accept", "*/*")
         .addHeader("referer", "https://blog.csdn.net/xiaohulunb?t=1")
-        .addHeader("accept-encoding","gzip, deflate, br")
-        .addHeader("accept-language","zh-CN,zh;q=0.9,en;q=0.8")
+        .addHeader("accept-encoding", "gzip, deflate, br")
+        .addHeader("accept-language", "zh-CN,zh;q=0.9,en;q=0.8")
         .addHeader("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36");
 
     private static final String[] URLS = new String[PAGE_NUMBER];

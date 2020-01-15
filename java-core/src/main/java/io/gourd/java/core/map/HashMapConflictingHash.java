@@ -90,7 +90,7 @@ public class HashMapConflictingHash {
             final Object o = a[i];
             if (o != null) {
                 System.out.println("logMsg graphLayout table [" + i + "]，GraphLayout = " + GraphLayout
-                 .parseInstance(o).toPrintable());
+                    .parseInstance(o).toPrintable());
                 b.append("，[").append(i).append("]=")
                     .append(o.getClass().getSimpleName())
                     .append(" ");

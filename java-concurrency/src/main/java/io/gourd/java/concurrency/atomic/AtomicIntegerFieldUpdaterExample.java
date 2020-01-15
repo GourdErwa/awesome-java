@@ -21,6 +21,7 @@ public class AtomicIntegerFieldUpdaterExample {
 
         log.info("increment return = {}", increment); // 31
     }
+
     @AllArgsConstructor
     @Getter
     private static class User {
