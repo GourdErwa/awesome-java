@@ -19,6 +19,19 @@ public class ByteCode {
         }
     }
 
+    public void lam() {
+        Comparable<Integer> comparable = o -> age;
+
+        comparable.compareTo(age);
+    }
+
+    String forNullVal = "1111111111111111111111111111111111111111111111111111111";
+    public void forNull() {
+        Integer integer = null;
+        if (integer == null) {
+            return;
+        }
+    }
     public static void main(String[] args) {
         final ByteCode code = new ByteCode("Lw", 20);
         final boolean gt = code.age(10);
