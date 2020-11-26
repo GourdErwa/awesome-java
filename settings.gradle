@@ -6,4 +6,7 @@ include 'java-core'
 include 'java-fw-webmagic'
 include 'java-computer-theory'
 include 'java-data-structures'
+include 'java-framework'
+include 'java-framework-leaf'
+include 'java-interview'
 
